@@ -9,7 +9,6 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
-
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -37,6 +36,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
+    'db.apps.DbConfig'
 ]
 
 MIDDLEWARE = [
@@ -76,8 +77,10 @@ WSGI_APPLICATION = 'database.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
+        #'NAME': 'Local instance 3306',
+        #'NAME': 'Mysql@localhost:3306',
         'NAME': 'fuel_efficiency',
-        'USER': 'ry',
+        'USER': 'root',
         'HOST': 'localhost',
     }
 }

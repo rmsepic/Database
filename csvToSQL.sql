@@ -1,0 +1,5 @@
+USE fuel_efficiency
+LOAD DATA INFILE 'Gas - Sheet2.csv'
+INTO TABLE gas
+FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\n';
